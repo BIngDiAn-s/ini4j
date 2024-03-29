@@ -37,7 +37,7 @@ final class ServiceFinder
         try
         {
 
-            // ez a cast nem lenne szükséges, de úgy a ClassCastException csak a hívónál jön...
+            // 
             return clazz.cast(findServiceClass(clazz).newInstance());
         }
         catch (Exception x)
