@@ -20,9 +20,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * JDK JAR Services API alap� service keres� oszt�ly.
- *
- * @author Szkiba Iv�n
+
  * @version $Name:  $
  */
 final class ServiceFinder
@@ -33,25 +31,7 @@ final class ServiceFinder
     {
     }
 
-    /**
-     * Service objektum keres�s �s p�ld�nyos�t�s
-     *
-     * a JDK JAR specifik�ci�ban defini�lt <B>Services API</B>-nak
-     * megfelel�en service oszt�ly keres�s, majd pedig p�ld�ny k�pz�s a context
-     * ClassLoader seg�ts�g�vel.</p><p>
-     * Az implement�l� oszt�ly n�v keres�se a <CODE>serviceId</CODE> nev�
-     * system property vizsg�lat�val kezd�dik. Amennyiben nincs ilyen
-     * property, �gy a keres�s a
-     * <CODE>/META-INF/services/<I>serviceId</I></CODE> nev� file tartalm�val
-     * folytat�dik. Amennyiben nincs ilyen nev� file, �gy a param�terk�nt �tadott
-     * <CODE>defaultService</CODE> lesz az oszt�ly neve.</p><p>
-     * A fenti keres�st k�vet�en t�rt�nik a p�ld�ny k�pz�s. A visszat�r�si
-     * �rt�k mindig egy val�di objektum, l�v�n minden hiba exception-t gener�l.
-     * @param <T> type
-     * @param clazz keresett oszt�ly/service neve
-     * @throws IllegalArgumentException keres�si vagy p�ld�nyos�t�si hiba eset�n
-     * @return a keresett oszt�ly implement�l� objektum
-     */
+
     static <T> T findService(Class<T> clazz)
     {
         try
